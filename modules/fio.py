@@ -20,3 +20,8 @@ def remove(file_path: str) -> None:
         os.remove(file_path)
     except:
         pass
+    
+def list(dir_path: str) -> list:
+    if not os.path.exists(dir_path):
+        return []
+    return os.listdir(dir_path)
