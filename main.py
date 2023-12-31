@@ -63,6 +63,7 @@ while(True):
         otherutils.run()
         
     elif selected == 9:
+        exec(args("clear"))
         exit(0)
         
         
