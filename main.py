@@ -18,7 +18,7 @@ import tasks.assignip as assignip
 import tasks.apply as apply
 import tasks.servicectl as servicectl
 import tasks.enablenat as enablenat
-import tasks.load as load
+import tasks.otherutils as otherutils
 
 while(True):
     
@@ -31,9 +31,9 @@ while(True):
         "Apply settings to configuration files",
         "Service Controls",
         "Enable NAT",
-        "Load settings from configuration files",
+        "Other Utilities",
         "Exit"
-    ], "Routered Ubuntu Configuration Utility", height=30)
+    ], "Routered Ubuntu Control Panel", height=30)
 
     if selected == 0:
         selectwan.run()
@@ -60,7 +60,7 @@ while(True):
         enablenat.run()
         
     elif selected == 8:
-        load.run()
+        otherutils.run()
         
     elif selected == 9:
         exit(0)
