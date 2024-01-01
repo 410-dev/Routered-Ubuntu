@@ -7,6 +7,13 @@ def exec(args: list) -> (int, str, str):
     except Exception as e:
         return -1, '', str(e)
 
+def execInteractive(args: list):
+    try:
+        result = subprocess.run(args)
+        return result.returncode, result.stdout, result.stderr
+    except Exception as e:
+        return -1, '', str(e)
+
 def args(string: str) -> list:
     result = []
     current = ''
